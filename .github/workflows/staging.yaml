@@ -42,5 +42,5 @@ jobs:
         key:  ${{ secrets.SSH_KEY }}
         script: |
            docker compose -f ${{ secrets.COMPOSE_FILE }} pull
-           docker compose down
-           docker compose up -d
+           docker compose -f ${{ secrets.COMPOSE_FILE }} down
+           docker compose -f ${{ secrets.COMPOSE_FILE }} up -d
