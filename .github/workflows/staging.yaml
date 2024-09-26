@@ -30,7 +30,8 @@ jobs:
 
   deploy:
 
-    runs-on: ubuntu-latest #24     
+    runs-on: ubuntu-latest #24 
+    needs: build
 
     steps:
     - name: SSH
